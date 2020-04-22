@@ -1,7 +1,7 @@
 import numpy as np
-import random
+from random import seed, sample, randint
 from scipy.spatial import distance_matrix
-from td_place import Place
+from ghh_place import Place
 
 # Define all place cards
 starting_place = {'West Morgan': {'Bean': -1, 'Corn': -1, 'Cow': -2, 'Pig': -2}}
@@ -62,12 +62,12 @@ graph_list[2][:, :, 3] = np.array([[0, 0], [1, 0], [0, 1], [-1, 0], [0, -1], [1,
            [-1, -1], [-2, 0], [2, 0], [0, -2], [0, 2]])
 
 
-# Initialization of game gap
+# Initialization of game map
 class Map:
-    def __init__(self, n_players, seed):
+    def __init__(self, n_players, seed_map=None):
         # Randomly arrange places
-        random.seed(seed)
-        places = random.sample(place_info.keys(), 4 + 2 * n_players)
+        seed(seed_map)
+        places = sample(place_info.keys(), 4 + 2 * n_players)
 
         # Specify starting place
         self.places = [Place('West Morgan', None, starting_place['West Morgan'], not_start=False)]
@@ -75,9 +75,10 @@ class Map:
             self.places.append(Place(place, place_info[place][0], place_info[place][1]))
         
         # Generate map and compute simple path for every node
-        self.coordinates = graph_list[n_players - 2][:, :, random.randint(0, 2)]
+        self.map_index = randint(0, 3)
+        self.coordinates = graph_list[n_players - 2][:, :, self.map_index]
         dm = distance_matrix(self.coordinates, self.coordinates, p=1)
-        idx = np.arange(dm.shape[1])
+        idx = np.arange(dm.shape[1], dtype=np.int8)
         self.one_step = [idx[(dm == 1)[i, :]] for i in idx]
         self.two_steps = [idx[(dm == 2)[i, :]] for i in idx]
         adj_mat = (dm == 1).astype(int)

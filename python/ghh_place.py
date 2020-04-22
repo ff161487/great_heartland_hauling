@@ -1,4 +1,4 @@
-from td_parameters import INIT_NUM_ITEM, MAX_NUM_ITEM
+from ghh_parameters import INIT_NUM_ITEM, MAX_NUM_ITEM
 
 
 class Place:
