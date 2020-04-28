@@ -4,8 +4,8 @@ from ghh_player import Player
 from pdb import set_trace
 
 
-class AI_RandomUniform(Player):
-    def __init__(self, name, seed_p):
+class AiRandomUniform(Player):
+    def __init__(self, name, seed_p=None):
         super().__init__(name)
         self.seed = seed_p
         self.public_info_list = []

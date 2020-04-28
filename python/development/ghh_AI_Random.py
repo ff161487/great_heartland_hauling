@@ -13,8 +13,8 @@ def profit(actions):
     return pf
 
 
-class AI_Random(Player):
-    def __init__(self, name, seed_p):
+class AiRandom(Player):
+    def __init__(self, name, seed_p=None):
         super().__init__(name)
         self.seed = seed_p
         self.public_info_list = []
