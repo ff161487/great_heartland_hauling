@@ -80,9 +80,10 @@ class Map:
         dm = distance_matrix(self.coordinates, self.coordinates, p=1)
         idx = np.arange(dm.shape[1], dtype=np.int8)
         self.one_step = [idx[(dm == 1)[i, :]] for i in idx]
-        self.two_steps = [idx[(dm == 2)[i, :]] for i in idx]
         adj_mat = (dm == 1).astype(int)
         am2 = np.linalg.matrix_power(adj_mat, 2)
+        rm2 = am2 - np.diag(np.diag(am2))
+        self.two_steps = [idx[(rm2 > 0)[i, :]] for i in idx]
         am3 = np.linalg.matrix_power(adj_mat, 3)
         loop_count = (np.outer(np.diag(am2), np.ones(dm.shape[1], np.int8)) +
                       np.outer(np.ones(dm.shape[1], np.int8), np.diag(am2)))

@@ -14,7 +14,18 @@ def play_game(n):
     # Define the game and start to play
     game = Game(player_list)
     game.run()
-    set_trace()
+
+    # Output winner
+    if game.result.sum() == 0:
+        print("很抱歉，本次游戏没有玩家获胜。要再接再厉哦~")
+    else:
+        winner = [game.players[i].name for i in range(n) if game.result[i]]
+        print("本次游戏获胜的玩家是：{}".format(winner))
+
+    # Enter 'q' to quit
+    s = None
+    while s != 'q':
+        s = input("请输入'q'以退出游戏：")
 
 
 if __name__ == '__main__':
