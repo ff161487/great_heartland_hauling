@@ -4,10 +4,10 @@
 《货运卡车》(The Great Heartland Hauling Co.)是一款益智类的卡牌桌游，适合玩家数目2~4人进行游戏，十分适合在情侣之间或合租屋、同宿舍的室友之间进行。玩家将会操作自己的卡车，将不同种货物从其产地运送至相应的可出售对应货物的地点，从而赚取收益。先达到“临界金额”的玩家宣布游戏进入最后一轮，在本轮结束后进行结算，并判断哪位或哪几位玩家最终获得胜利。具体游戏规则请参考下面的“游戏规则”部分。
 
 据悉，《货运卡车》的原设计者为Jason Kotarski，这里我们感谢原设计者以及相关的美术人员为我们带来了这样一款精美的卡牌游戏。下面给出一些参考链接，供有兴趣的读者进一步了解《货运卡车》的背景：
--["BGG"网站的相关链接](https://www.boardgamegeek.com/boardgame/111417/great-heartland-hauling-co)
--["Dice Hate Me"上的链接](http://www.dicehatemegames.com/games/the-great-heartland-hauling-company/)
--["Greater Than Games"上的链接](https://store.greaterthangames.com/the-great-heartland-hauling-co-.html#product-details-tab-description)
--[B站视频介绍](https://www.bilibili.com/video/av46780997)
+- ["BGG"网站的相关链接](https://www.boardgamegeek.com/boardgame/111417/great-heartland-hauling-co)
+- ["Dice Hate Me"上的链接](http://www.dicehatemegames.com/games/the-great-heartland-hauling-company/)
+- ["Greater Than Games"上的链接](https://store.greaterthangames.com/the-great-heartland-hauling-co-.html#product-details-tab-description)
+- [B站视频介绍](https://www.bilibili.com/video/av46780997)
 
 ## 项目简介
 本项目是作者在同室友玩过《货运卡车》后被成功安利入坑的。经过讨论，大家一致认为线下玩耍过程中，洗牌问题对结果影响甚大。如果弃牌堆洗牌不匀，会导致同类型卡牌在摸牌时集中出现，很大程度上影响了游戏体验，破坏了游戏平衡性。因此，我们萌生了将这款有趣的线下桌游搬到线上的想法。由此诞生了本项目。
